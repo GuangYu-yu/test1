@@ -1,0 +1,16 @@
+{
+  "links": [
+    {
+      "name": "github.com",
+      "url": "https://github.com",
+      "faviconUrl": "https://github.com/favicon.ico"
+    }
+  ],
+  "resources": [
+    {
+      "name": "github.com",
+      "url": "https://github.com",
+      "faviconUrl": "https://favicone.com/github.com?s=256"
+    }
+  ]
+}
