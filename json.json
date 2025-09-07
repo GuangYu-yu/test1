@@ -1,16 +1,55 @@
 {
   "links": [
     {
-      "name": "github.com",
-      "url": "https://github.com",
-      "faviconUrl": "https://github.com/favicon.ico"
-    }
-  ],
-  "resources": [
-    {
-      "name": "github.com",
+      "name": "Github",
       "url": "https://github.com",
       "faviconUrl": "https://favicone.com/github.com?s=256"
+    },
+    {
+      "name": "Bilibili",
+      "url": "https://bilibili.com",
+      "faviconUrl": "https://favicone.com/bilibili.com?s=256"
+    },
+    {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "faviconUrl": "https://favicone.com/chatgpt.com?s=256"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://youtube.com",
+      "faviconUrl": "https://favicone.com/youtube.com?s=256"
+    },
+    {
+      "name": "DeepSeek",
+      "url": "https://chat.deepseek.com",
+      "faviconUrl": "https://favicone.com/chat.deepseek.com?s=256"
+    },
+    {
+      "name": "Kimi",
+      "url": "https://kimi.com",
+      "faviconUrl": "https://favicone.com/kimi.com?s=256"
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://cloudflare.com",
+      "faviconUrl": "https://favicone.com/cloudflare.com?s=256"
+    },
+    {
+      "name": "Qwen",
+      "url": "https://tongyi.aliyun.com",
+      "faviconUrl": "https://favicone.com/tongyi.aliyun.com?s=256"
+    },
+    {
+      "name": "10.0.0.1",
+      "url": "http://10.0.0.1",
+      "faviconUrl": "https://favicone.com/openwrt.org?s=256"
+    },
+    {
+      "name": "Metacubexd",
+      "url": "http://10.0.0.1:9090/ui/metacubexd",
+      "faviconUrl": "https://raw.githubusercontent.com/MetaCubeX/metacubexd/refs/heads/main/public/favicon.svg"
     }
-  ]
+  ],
+  "resources": []
 }
