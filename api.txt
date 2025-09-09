@@ -6,7 +6,7 @@ x.com
 stackoverflow.com
 stackexchange.com
 freecodecamp.org
-codecademy.org
+codecademy.com
 sourceforge.net
 gitlab.com
 npmjs.com
