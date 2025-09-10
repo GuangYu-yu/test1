@@ -49,6 +49,31 @@
       "name": "Metacubexd",
       "url": "http://10.0.0.1:9090/ui/metacubexd",
       "faviconUrl": "https://raw.githubusercontent.com/MetaCubeX/metacubexd/refs/heads/main/public/favicon.svg"
+    },
+    {
+      "name": "Epic",
+      "url": "https://store.epicgames.com/zh-CN",
+      "faviconUrl": "https://static-assets-prod.epicgames.com/epic-store/static/favicon.ico"
+    },
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/",
+      "faviconUrl": "https://store.steampowered.com/favicon.ico"
+    },
+    {
+      "name": "CleverPDF",
+      "url": "https://www.cleverpdf.com/cn",
+      "faviconUrl": "https://www.cleverpdf.com/statics/images/favicon.ico"
+    },
+    {
+      "name": "Gemini",
+      "url": "https://gemini.google.com/app",
+      "faviconUrl": "https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg"
+    },
+    {
+      "name": "Grok",
+      "url": "https://grok.com/",
+      "faviconUrl": "https://grok.com/favicon.ico"
     }
   ],
   "resources": []
