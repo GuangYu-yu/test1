@@ -2,7 +2,6 @@ canva.com
 openai.com
 ai.com
 mistral.ai
-x.com
 stackoverflow.com
 stackexchange.com
 freecodecamp.org
