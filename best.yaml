@@ -12,6 +12,8 @@ proxy-providers:
       interval: 300
     proxy: 直连
     override:
+      dialer-proxy: 轮询
+      mptcp: true
       ip-version: ipv6-prefer
       additional-suffix: "| 机场1"
 
@@ -25,6 +27,8 @@ proxy-providers:
       interval: 300
     proxy: 直连
     override:
+      dialer-proxy: 轮询
+      mptcp: true
       ip-version: ipv6-prefer
       additional-suffix: "| 机场2"
 
