@@ -62,6 +62,10 @@ dns:
   fake-ip-range: 198.20.0.1/16
   nameserver:
     - 223.5.5.5
+    - 119.29.29.29
+  fallback:
+    - tls://8.8.8.8:853
+    - tls://1.1.1.1:853
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - +.lan
