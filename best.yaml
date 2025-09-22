@@ -158,6 +158,7 @@ proxy-groups:
   - {name: Cloudflare, <<: *pr}
   - {name: 国外, <<: *pr}
   - {name: Games, <<: *pr}
+  - {name: GlobalMedia, <<: *pr}
   - {name: AI, <<: *pr}
   - {name: Test, <<: *pr}
   - {name: Apple, <<: *pr}
@@ -245,6 +246,7 @@ rules:
   - RULE-SET,Apple-CN,Apple
   - RULE-SET,Apple-Custome,Apple
   - RULE-SET,Games,Games
+  - RULE-SET,GlobalMedia,GlobalMedia
 
   - RULE-SET,Advertising,广告
   - RULE-SET,sr_ad_only,广告
