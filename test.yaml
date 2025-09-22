@@ -5,7 +5,7 @@ proxy-providers:
   机场1:
     url: "机场订阅地址"  
     type: http
-    interval: 86400
+    interval: 3600
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -13,20 +13,20 @@ proxy-providers:
     proxy: 直连
     override:
       ip-version: ipv6-prefer
-      additional-suffix: "| 机场1"
+      additional-suffix: "| 机场"
 
   机场2:
     url: "机场订阅地址"  
     type: http
-    interval: 86400
+    interval: 3600
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
-      interval: 300
+      interval: 1800
     proxy: 直连
     override:
       ip-version: ipv6-prefer
-      additional-suffix: "| 机场2"
+      additional-suffix: "| 优选"
 
 proxies:
   - {name: 直连, type: direct}
@@ -125,10 +125,10 @@ proxy-groups:
   - {name: Microsoft, <<: *pr}
   - {name: 其他, <<: *pr}
 
-  - {name: 🔮 优选均衡, type: load-balance, include-all: true, filter: "(?i)机场2"}
-  - {name: ♻️ 优选自动, type: url-test, include-all: true, filter: "(?i)机场2"}
+  - {name: 🔮 优选均衡, type: load-balance, include-all: true, filter: "(?i)优选"}
+  - {name: ♻️ 优选自动, type: url-test, include-all: true, filter: "(?i)优选"}
 
-  - {name: ☑️ 机场切换, type: select, include-all: true, filter: "(?i)机场1"}
+  - {name: ☑️ 机场切换, type: select, include-all: true, filter: "(?i)机场"}
 
   - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(广港|香港|HK|Hong Kong|🇭🇰|HongKong)).*$"}
   - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日本|JP|Japan|🇯🇵|Japan)).*$"}
