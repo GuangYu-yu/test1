@@ -7,7 +7,6 @@ stackexchange.com
 freecodecamp.org
 codecademy.com
 sourceforge.net
-gitlab.com
 npmjs.com
 digitalocean.com
 postman.com
@@ -24,6 +23,5 @@ travis-ci.com
 openstack.org
 cloudfoundry.org
 spring.io
-paypal.com
 squareup.com
 blockchain.com
