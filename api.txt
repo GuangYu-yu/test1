@@ -25,3 +25,7 @@ cloudfoundry.org
 spring.io
 squareup.com
 blockchain.com
+jumia.com
+carrefour.com
+cdiscount.com
+blibli.com
