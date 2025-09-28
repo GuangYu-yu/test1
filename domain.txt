@@ -31,4 +31,3 @@ cdiscount.com
 blibli.com
 paypal.com
 deepseek.com
-x.com
