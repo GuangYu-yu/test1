@@ -224,10 +224,25 @@ def main():
     
     # 写入结果文件（只包含纯IP列表）
     with open(output_file, 'w', encoding='utf-8') as f:
+        all_ips = []
         for domain, ips in results.items():
             if ips:
-                for ip in ips:
-                    f.write(f"{ip}\n")
+                all_ips.extend(ips)
+        
+        # 去重并排序：IPv4在前，IPv6在后
+        all_ips = list(set(all_ips))
+        ipv4_list = [ip for ip in all_ips if '.' in ip]  # IPv4地址包含点
+        ipv6_list = [ip for ip in all_ips if ':' in ip]  # IPv6地址包含冒号
+        
+        # 分别排序
+        ipv4_list.sort()
+        ipv6_list.sort()
+        
+        # 合并：IPv4在前，IPv6在后
+        sorted_ips = ipv4_list + ipv6_list
+        
+        for ip in sorted_ips:
+            f.write(f"{ip}\n")
     
     print(f"\n结果已保存到: {output_file}")
     
