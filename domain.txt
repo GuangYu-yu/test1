@@ -29,3 +29,6 @@ jumia.com
 carrefour.com
 cdiscount.com
 blibli.com
+paypal.com
+deepseek.com
+x.com
