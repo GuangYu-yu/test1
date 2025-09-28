@@ -231,15 +231,26 @@ def main():
         
         # 去重并排序：IPv4在前，IPv6在后
         all_ips = list(set(all_ips))
-        ipv4_list = [ip for ip in all_ips if '.' in ip]  # IPv4地址包含点
-        ipv6_list = [ip for ip in all_ips if ':' in ip]  # IPv6地址包含冒号
+        ipv4_list = []
+        ipv6_list = []
+        
+        for ip in all_ips:
+            try:
+                ip_obj = ipaddress.ip_address(ip)
+                if ip_obj.version == 4:
+                    ipv4_list.append(ip_obj)
+                elif ip_obj.version == 6:
+                    ipv6_list.append(ip_obj)
+            except ValueError:
+                # 如果无法解析为IP地址，跳过
+                continue
         
         # 分别排序
         ipv4_list.sort()
         ipv6_list.sort()
         
         # 合并：IPv4在前，IPv6在后
-        sorted_ips = ipv4_list + ipv6_list
+        sorted_ips = [str(ip) for ip in ipv4_list] + [str(ip) for ip in ipv6_list]
         
         for ip in sorted_ips:
             f.write(f"{ip}\n")
