@@ -1,4 +1,5 @@
 r2.cloudflarestorage.com
+cloudflarestream.com
 openai.com
 canva.com
 carrefour.com
