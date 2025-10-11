@@ -57,7 +57,7 @@
     },
     {
       "name": "Steam",
-      "url": "https://store.steampowered.com/",
+      "url": "https://store.steampowered.com",
       "faviconUrl": "https://store.steampowered.com/favicon.ico"
     },
     {
@@ -72,8 +72,8 @@
     },
     {
       "name": "Grok",
-      "url": "https://grok.com/",
-      "faviconUrl": "https://grok.com/favicon.ico"
+      "url": "https://grok.com",
+      "faviconUrl": "https://favicone.com/grok.com?s=256"
     }
   ],
   "resources": []
