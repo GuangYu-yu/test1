@@ -1,5 +1,6 @@
 canva.com
 openai.com
+sora.com
 ai.com
 mistral.ai
 stackoverflow.com
@@ -19,7 +20,6 @@ name.com
 hostgator.com
 register.com
 redis.com
-travis-ci.com
 openstack.org
 cloudfoundry.org
 spring.io
