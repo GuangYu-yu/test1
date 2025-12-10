@@ -8,7 +8,7 @@
     {
       "name": "Bilibili",
       "url": "https://bilibili.com",
-      "faviconUrl": "https://favicone.com/bilibili.com?s=256"
+      "faviconUrl": "https://favicone.com/www.bilibili.com?s=256"
     },
     {
       "name": "ChatGPT",
@@ -37,8 +37,8 @@
     },
     {
       "name": "Qwen",
-      "url": "https://tongyi.aliyun.com",
-      "faviconUrl": "https://favicone.com/tongyi.aliyun.com?s=256"
+      "url": "https://www.qianwen.com",
+      "faviconUrl": "https://img.alicdn.com/imgextra/i2/O1CN01FPcQDy1WTPjPX6IH9_!!6000000002789-2-tps-96-96.png"
     },
     {
       "name": "10.0.0.1",
