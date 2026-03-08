@@ -23,12 +23,12 @@
     {
       "name": "DeepSeek",
       "url": "https://chat.deepseek.com",
-      "faviconUrl": "https://chat.deepseek.com/favicon.svg"
+      "faviconUrl": "https://cdn.deepseek.com/chat/icon.png"
     },
     {
       "name": "Kimi",
       "url": "https://kimi.com",
-      "faviconUrl": "https://favicone.com/kimi.com?s=256"
+      "faviconUrl": "https://statics.moonshot.cn/kimi-web-seo/favicon.ico"
     },
     {
       "name": "Cloudflare",
@@ -37,7 +37,7 @@
     },
     {
       "name": "Qwen",
-      "url": "https://www.qianwen.com",
+      "url": "https://www.qianwen.com/",
       "faviconUrl": "https://img.alicdn.com/imgextra/i2/O1CN01FPcQDy1WTPjPX6IH9_!!6000000002789-2-tps-96-96.png"
     },
     {
