@@ -2,6 +2,7 @@ Office
 BitComet
 WinSCP
 Steam
+Epic Game
 VMware
 clash-verge
 图吧工具箱2
