@@ -1,0 +1,41 @@
+{
+    // ========== 1. UTF-8 编码锁定 ==========
+    "terminal.integrated.env.windows": {
+        "PYTHONIOENCODING": "utf-8",
+        "LANG": "en_US.UTF-8",
+        "LC_ALL": "en_US.UTF-8"
+    },
+
+    // ========== 2. Shell Profile（含启动优化） ==========
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "args": [
+                "-NoLogo",
+                "-NoExit",
+                "-Command",
+                "chcp 65001 | Out-Null; [Console]::OutputEncoding = [System.Text.Encoding]::UTF8"
+            ]
+        },
+        "Command Prompt": {
+            "path": "cmd.exe",
+            "args": ["/K", "chcp 65001"]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+    // ========== 3. 字体与渲染 ==========
+    "terminal.integrated.fontFamily": "'Maple Mono NF CN', monospace",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.lineHeight": 1.1,
+
+    // ========== 4. 交互行为优化 ==========
+    "terminal.integrated.rightClickBehavior": "paste",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.enableMultiLinePasteWarning": "always",
+    "terminal.integrated.enableFileLinks": "on",
+    "gitai.enabled": false,
+    "editor.fontFamily": "'Maple Mono NF CN', monospace",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontLigatures.enabled": true
+}
