@@ -76,5 +76,11 @@
       "faviconUrl": "https://favicone.com/grok.com?s=256"
     }
   ],
-  "resources": []
+  "customEngines": [],
+  "customFaviconOverrides": {},
+  "engineOrders": {
+    "search": [],
+    "translate": [],
+    "resource": []
+  }
 }
