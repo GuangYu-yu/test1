@@ -33,7 +33,7 @@
     {
       "name": "Cloudflare",
       "url": "https://dash.cloudflare.com",
-      "faviconUrl": "https://favicone.com/cloudflare.com?s=256"
+      "faviconUrl": "https://dash.cloudflare.com/favicon.ico"
     },
     {
       "name": "Qwen",
@@ -43,7 +43,7 @@
     {
       "name": "10.0.0.1",
       "url": "http://10.0.0.1",
-      "faviconUrl": "https://favicone.com/openwrt.org?s=256"
+      "faviconUrl": "https://openwrt.org/favicon.ico"
     },
     {
       "name": "Metacubexd",
