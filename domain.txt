@@ -4,6 +4,4 @@ temu.com
 canva.com
 npmjs.com
 freecodecamp.org
-blockchain.com
 opensea.io
-carrefour.com
