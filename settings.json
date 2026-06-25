@@ -38,5 +38,7 @@
     "editor.fontFamily": "'Maple Mono NF CN', monospace",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
     "terminal.integrated.fontLigatures.enabled": true
 }
