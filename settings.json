@@ -37,5 +37,6 @@
     "gitai.enabled": false,
     "editor.fontFamily": "'Maple Mono NF CN', monospace",
     "editor.fontSize": 14,
+    "editor.fontLigatures": true,
     "terminal.integrated.fontLigatures.enabled": true
 }
