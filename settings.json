@@ -6,8 +6,18 @@
         "LC_ALL": "en_US.UTF-8"
     },
 
-    // ========== 2. Shell Profile（含启动优化） ==========
+    // ========== 2. Shell Profile ==========
     "terminal.integrated.profiles.windows": {
+        "PowerShell 7": {
+            "path": "pwsh.exe",
+            "args": [
+                "-NoLogo",
+                "-NoExit",
+                "-Command",
+                "chcp 65001 | Out-Null; [Console]::OutputEncoding = [System.Text.Encoding]::UTF8; $OutputEncoding = [System.Text.Encoding]::UTF8"
+            ],
+            "icon": "terminal-powershell"
+        },
         "PowerShell": {
             "source": "PowerShell",
             "args": [
@@ -22,7 +32,7 @@
             "args": ["/K", "chcp 65001"]
         }
     },
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.windows": "PowerShell 7",
 
     // ========== 3. 字体与渲染 ==========
     "terminal.integrated.fontFamily": "'Maple Mono NF CN', monospace",
@@ -35,7 +45,7 @@
     "terminal.integrated.enableMultiLinePasteWarning": "always",
     "terminal.integrated.enableFileLinks": "on",
     "gitai.enabled": false,
-    "editor.fontFamily": "'Maple Mono NF CN', monospace",
+    "editor.fontFamily": "'Maple Mono NF CN', monospace",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
     "editor.bracketPairColorization.enabled": true,
