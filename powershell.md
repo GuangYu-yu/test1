@@ -5,7 +5,7 @@
 1.  **打开一个普通的 PowerShell 窗口**（无需管理员权限）。
 
 2.  **一键创建并写入配置文件**：复制以下完整命令块，在 PowerShell 中粘贴并回车。它会自动创建 `$PROFILE` 文件并写入最干净的 UTF-8 配置。
-    ```powershell
+    ```plaintext
 New-Item -Path (Split-Path $PROFILE) -ItemType Directory -Force | Out-Null
 @"
 chcp 65001 | Out-Null
@@ -54,7 +54,7 @@ PowerShell 7 有自己的独立配置文件，但我们可以**直接复制** 5.
 1.  **打开 PowerShell 7**（在终端中输入 `pwsh` 并回车，或从开始菜单打开 “PowerShell 7”）。
 
 2.  **从 5.1 复制配置文件到 7**：在 PowerShell 7 窗口中，执行以下命令：
-    ```powershell
+    ```plaintext
 New-Item -Path (Split-Path $PROFILE) -ItemType Directory -Force | Out-Null
 $oldProfile = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 if (Test-Path $oldProfile) {
