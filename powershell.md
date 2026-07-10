@@ -5,7 +5,7 @@
 1.  **打开一个普通的 PowerShell 窗口**（无需管理员权限）。
 
 2.  **一键创建并写入配置文件**：复制以下完整命令块，在 PowerShell 中粘贴并回车。它会自动创建 `$PROFILE` 文件并写入最干净的 UTF-8 配置。
-    ```plaintext
+<pre><code class="language-powershell">
 New-Item -Path (Split-Path $PROFILE) -ItemType Directory -Force | Out-Null
 @"
 chcp 65001 | Out-Null
@@ -18,7 +18,7 @@ chcp 65001 | Out-Null
 Set-Location `$env:USERPROFILE
 function prompt { `$ESC = [char]27; "`$ESC[36mPS `$(`$executionContext.SessionState.Path.CurrentLocation)`$('>' * (`$nestedPromptLevel + 1))`$ESC[0m " }
 "@ | Out-File -FilePath $PROFILE -Encoding utf8 -Force
-    ```
+</code></pre>
 
 3.  **授权运行脚本**：这是让配置自动加载的关键。
     *   在开始菜单找到 “PowerShell”，**右键** → “以管理员身份运行”。
@@ -54,13 +54,13 @@ PowerShell 7 有自己的独立配置文件，但我们可以**直接复制** 5.
 1.  **打开 PowerShell 7**（在终端中输入 `pwsh` 并回车，或从开始菜单打开 “PowerShell 7”）。
 
 2.  **从 5.1 复制配置文件到 7**：在 PowerShell 7 窗口中，执行以下命令：
-    ```plaintext
+<pre><code class="language-powershell">
 New-Item -Path (Split-Path $PROFILE) -ItemType Directory -Force | Out-Null
 $oldProfile = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 if (Test-Path $oldProfile) {
     Copy-Item -Path $oldProfile -Destination $PROFILE -Force
 }
-    ```
+</code></pre>
 
 3.  **为 PowerShell 7 单独授权运行脚本**：与 5.1 类似，需要单独设置一次。
     *   在开始菜单找到 “PowerShell 7” 或 “pwsh”，**右键** → “以管理员身份运行”。
