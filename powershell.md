@@ -13,6 +13,7 @@ $env:PYTHONIOENCODING='utf-8'
 Set-Location $HOME
 
 $isAdmin=([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+$global:lastInfo=""
 
 function prompt{
 $e=[char]27
@@ -20,7 +21,8 @@ $r=if($isAdmin){"$e[31m[Admin]$e[0m"}else{"$e[32m[User]$e[0m"}
 $p="$e[36m$($executionContext.SessionState.Path.CurrentLocation)$e[0m"
 $b=if(Get-Command git -ea 0){git branch --show-current 2>$null}
 $g=if($b){" $e[33m($b)$e[0m"}
-"$r $p$g`n$e[33m>>>$e[0m "
+$info="$r $p$g"
+if($info -ne $global:lastInfo){$global:lastInfo=$info;"$info`n$e[33m>>>$e[0m "}else{"$e[33m>>>$e[0m "}
 }
 '@|Set-Content -Path $PROFILE;. $PROFILE
 </code></pre>
