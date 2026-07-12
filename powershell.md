@@ -6,18 +6,23 @@
 
 2.  **一键创建并写入配置文件**：复制以下完整命令块，在 PowerShell 中粘贴并回车。它会自动创建 `$PROFILE` 文件并写入最干净的 UTF-8 配置。
 <pre><code class="language-powershell">
-ni(Split-Path $PROFILE)-Type Directory -fo|Out-Null;@"
+@'
 chcp 65001|Out-Null
-[Console]::InputEncoding=[System.Text.UTF8Encoding]::new()
-[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new()
-`$OutputEncoding=[System.Text.UTF8Encoding]::new()
-`$env:PYTHONIOENCODING="utf-8"
-`$env:LANG="en_US.UTF-8"
-`$env:LC_ALL="en_US.UTF-8"
-Set-Location `$env:USERPROFILE
-`$a=([Security.Principal.WindowsPrincipal]::new([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-function prompt{`$e=[char]27;`$p=`$executionContext.SessionState.Path.CurrentLocation;`$g=git branch --show-current 2>$null;if(`$a){"`$e[91m[Admin]`$e[0m `$e[93mPS `$p`$e[0m`$e[33m$(if(`$g){' ['+`$g+']'})`$e[0m`n`$e[32m>>>`$e[0m "}else{"`$e[90m[User]`$e[0m `$e[36mPS `$p`$e[0m`$e[33m$(if(`$g){' ['+`$g+']'})`$e[0m`n`$e[32m>>>`$e[0m "}}
-"@|Out-File $PROFILE -Encoding utf8 -Force
+[Console]::InputEncoding=[Console]::OutputEncoding=$OutputEncoding=[System.Text.UTF8Encoding]::new()
+$env:PYTHONIOENCODING='utf-8'
+Set-Location $HOME
+
+$isAdmin=([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+
+function prompt{
+$e=[char]27
+$r=if($isAdmin){"$e[31m[Admin]$e[0m"}else{"$e[32m[User]$e[0m"}
+$p="$e[36m$($executionContext.SessionState.Path.CurrentLocation)$e[0m"
+$b=if(Get-Command git -ea 0){git branch --show-current 2>$null}
+$g=if($b){" $e[33m($b)$e[0m"}
+"$r $p$g`n$e[33m>>>$e[0m "
+}
+'@|Set-Content -Path $PROFILE;. $PROFILE
 </code></pre>
 
 3.  **授权运行脚本**：这是让配置自动加载的关键。
@@ -55,9 +60,7 @@ PowerShell 7 有自己的独立配置文件，但我们可以**直接复制** 5.
 
 2.  **从 5.1 复制配置文件到 7**：在 PowerShell 7 窗口中，执行以下命令：
 <pre><code class="language-powershell">
-New-Item -Path (Split-Path $PROFILE) -ItemType Directory -Force | Out-Null
-$o = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
-if (Test-Path $o) { Copy-Item $o $PROFILE -Force }
+New-Item -Path (Split-Path $PROFILE) -ItemType Directory -Force | Out-Null; $o = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"; if (Test-Path $o) { Copy-Item $o $PROFILE -Force }; . $PROFILE
 </code></pre>
 
 3.  **为 PowerShell 7 单独授权运行脚本**：与 5.1 类似，需要单独设置一次。
