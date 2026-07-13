@@ -10,7 +10,6 @@
 chcp 65001|Out-Null
 [Console]::InputEncoding=[Console]::OutputEncoding=$OutputEncoding=[System.Text.UTF8Encoding]::new()
 $env:PYTHONIOENCODING='utf-8'
-Set-Location $HOME
 
 $isAdmin=([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 $global:lastInfo=""
