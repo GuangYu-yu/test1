@@ -50,5 +50,8 @@
     "editor.fontLigatures": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": true,
+    "editor.minimap.enabled": true,
+    "editor.fontVariations": true,
+    "editor.mouseWheelZoom": true,
     "terminal.integrated.fontLigatures.enabled": true
 }
