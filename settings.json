@@ -63,9 +63,11 @@
 
     // ========== 6. rust-analyzer ==========
     "rust-analyzer.statusBar.showStatusBar": "always",
+    "rust-analyzer.check.command": "clippy",
     "rust-analyzer.files.watcher": "server",
-    "rust-analyzer.check.allTargets": false,
-    "rust-analyzer.cargo.buildScripts.rebuildOnSave": true
+    "rust-analyzer.imports.granularity.group": "module",
+    "rust-analyzer.inlayHints.typeHints.enable": true,
+    "rust-analyzer.inlayHints.chainingHints.enable": false
 
     // ========== 以下为插件 / 宿主自动追加区 ==========
 }
