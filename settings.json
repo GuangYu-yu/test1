@@ -53,5 +53,19 @@
     "editor.minimap.enabled": true,
     "editor.fontVariations": true,
     "editor.mouseWheelZoom": true,
-    "terminal.integrated.fontLigatures.enabled": true
+    "terminal.integrated.fontLigatures.enabled": true,
+
+    // ========== 5. 差异视图与外观 ==========
+    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": true,
+    "workbench.colorTheme": "Dark",
+    "workbench.panel.showLabels": false,
+
+    // ========== 6. rust-analyzer ==========
+    "rust-analyzer.statusBar.showStatusBar": "always",
+    "rust-analyzer.files.watcher": "server",
+    "rust-analyzer.check.allTargets": false,
+    "rust-analyzer.cargo.buildScripts.rebuildOnSave": true
+
+    // ========== 以下为插件 / 宿主自动追加区 ==========
 }
